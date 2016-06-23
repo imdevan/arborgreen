@@ -1,0 +1,8 @@
+<header class="row secondary-header">
+    <div class="col-12">
+    <h2 class="secondary-header--title">{{page.title}}</h2>
+    {% for image in page.header-images %}
+        <img class="secondary-header--image"src="{{image}}" alt="">
+    {% endfor %}
+    </div>
+</header>

@@ -1,0 +1,243 @@
+
+/*font-family: 'Cairo', sans-serif;
+font-family: 'Montserrat', sans-serif;*/
+$maroon: #800000;
+$bg-primary: $maroon;
+$light-text: white;
+$container-max-width: 900px;
+
+*{
+   margin: 0;
+   padding: 0;
+   resize: none;
+   font-family: Cairo;
+}
+
+.container{
+    max-width: $container-max-width;
+    width: 90%;
+    margin: auto;
+}
+
+.main-container{
+	background-color:gray;
+}
+
+.header-container{
+	height:12.5em;
+}
+.header-info{
+	background-color: $light-text;
+	height:9em;
+	text-align:center;
+
+}
+
+.address{
+	margin: 7% 0 0 0;
+	font-family: Cairo;
+	color: $bg-primary;
+}
+
+.address-list{
+	list-style-type: none;
+}
+.phone{
+	margin: 8% 0 0 0;
+	font-family: Cairo;
+	font-size: 1.5em;
+	color: $bg-primary;
+}
+
+.phone img{
+	height:1.5em;
+	width:1.5em;
+}
+.nav{
+	background-color: #f5d76e;
+	padding: 1em;
+	height:25%;
+}
+
+.time-pic{
+
+	height: 21em;
+}
+
+.hours{
+	height: 21em;
+}
+#opening-hours{
+	font-family: Montserrat;
+	margin: 1em 0 0 1.5em;
+	color: $bg-primary;
+}
+.opening{
+	border-bottom: 1px black solid;
+	color: $bg-primary;
+}
+
+.times-container{
+	padding:0;
+	background-color:$light-text;
+}
+
+.times{
+	    list-style-type: none;
+	    line-height:1.25em;
+	    margin: .5em 0 0 2.3em;
+	    padding: 0 0 1.75em 0;
+
+}
+
+.time-pic{
+	padding:0;
+}
+
+.time-pic img{
+	height:100%;
+	width: 100%;
+	padding:0;
+}
+
+.times-item{
+	margin: 0 0 .2em 0;
+}
+
+.appointment{
+	height: 5.2em;
+	background-color: $bg-primary;
+	border: 3px $light-text solid;
+}
+
+.appointment img{
+	height:1.75em;
+	width:1.75em;
+}
+#appointment{
+	background-color: $bg-primary;
+	margin: 7% 0 0 15%;
+	color: $light-text;
+	padding: 0;
+
+}
+
+#appointment a{
+	text-decoration: none;
+	color: $light-text;
+}
+.general-container{
+	height:30em;
+	background-color:$light-text;
+}
+
+.info{
+	height:30em;
+
+}
+.news{
+	height:30em;
+	padding: 3em 2em 0 2em;
+	color: $bg-primary;
+}
+
+#news-header{
+	font-family: Montserrat;
+	color: $bg-primary;
+}
+
+.news-headlines{
+	list-style: none;
+
+}
+.services{
+	background-color: none;
+	height:30em;
+	padding: 3em 2em 0 4em;
+	border-left: 1px solid black;
+}
+
+span{
+	text-align: right;
+}
+#services-header{
+	font-family: Montserrat;
+	color: $bg-primary;
+}
+.services-headlines{
+	line-height: 2em;
+	color: $bg-primary;
+}
+.services-item{
+	margin: 0 0 .2em 0;
+}
+.new-patient{
+	background-color: $bg-primary;
+	height:30em;
+	padding:0;
+}
+
+.new-patient-header{
+	text-align: center;
+	padding:1.5em 0 1.5em 0;
+	border: 3px solid $light-text;
+	width: 22em;
+}
+
+.new-patient-header h5{
+	font-family: Montserrat;
+	font-weight: bold;
+	color:$light-text;
+	padding:0;
+}
+.new-patient img{
+	height:25em;
+	width:21.1em;
+}
+
+span{
+	height:15em;
+	width:17em;
+	margin: 0 0 15em 0;
+	position:relative;
+	background-color: black;
+	z-index:1;
+}
+.find-us{
+	background-color: gray;
+	height:10em;
+}
+
+.products-border{
+	background-color: $bg-primary;
+	height:10em;
+	padding: 1em 1em 1em 1em;
+}
+
+.products{
+	border: 2px $light-text solid;
+}
+.map{
+	background-color: gray;
+	height: 10em;
+	padding:0;
+}
+iframe{
+	height: 10em;
+	width:21em;
+}
+
+.secondary-header {
+    height: 100px;
+    display: flex;
+
+    &--title{
+        width: 100%;
+        flex: 2;
+    }
+
+    &--image{
+        width: 100%;
+        flex: 1;
+    }
+}

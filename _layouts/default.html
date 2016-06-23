@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include common/_head.html %}
+<body ontouchstart="">
+
+  <div class="main-container">
+    <div class="container">
+    {% include common/_navigation.html %}
+
+    {{ content }}
+
+    {% if jekyll.environment == "development" %}
+        <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>
+    {% else %}
+        <script type="text/javascript" src="{{site.url}}/js/main.js"></script>
+    {% endif %}
+
+        </div>
+    </div> <!-- end whole container -->
+    </div>
+    <!-- jQuery first, then Bootstrap JS. -->
+  </body>
+</body>
+</html>
