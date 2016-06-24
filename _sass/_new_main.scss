@@ -5,14 +5,15 @@ $maroon: #800000;
 $bg-primary: $maroon;
 $bg-light: white;
 $light-text: white;
+$accent-text: $maroon;
 $light-bg: white;
 $dark-bg: gray;
+$dark-accent: $dark-bg;
 $container-max-width: 900px;
 $yellow: #f5d76e;
 $screen-sizes: (
     md: 700px
 );
-
 
 *{
    margin: 0;
@@ -27,6 +28,14 @@ html, body {
     padding: 0;
 }
 
+.text--accent {
+    color: $accent-text;
+}
+
+h5 {
+    font-family: Montserrat;
+}
+
 .container{
     max-width: $container-max-width;
     width: 90%;
@@ -38,161 +47,11 @@ html, body {
 	background-color: $dark-bg;
 }
 
-.header-container{
-	height:12.5em;
-}
-.header-info{
-	background-color: $light-text;
-	height:9em;
-	text-align:center;
-
-}
-
-.address-list{
-	list-style-type: none;
-}
-
-
-.hours{
-	height: 21em;
-}
-#opening-hours{
-	font-family: Montserrat;
-	margin: 1em 0 0 1.5em;
-	color: $bg-primary;
-}
-.opening{
-	border-bottom: 1px black solid;
-	color: $bg-primary;
-}
-
-.appointment{
-	height: 5.2em;
-	background-color: $bg-primary;
-	border: 3px $light-text solid;
-}
-
-.appointment img{
-	height:1.75em;
-	width:1.75em;
-}
-#appointment{
-	background-color: $bg-primary;
-	margin: 7% 0 0 15%;
-	color: $light-text;
-	padding: 0;
-
-}
-
-#appointment a{
-	text-decoration: none;
-	color: $light-text;
-}
 .general-container{
 	height:30em;
 	background-color:$light-text;
 }
 
-.info{
-	height:30em;
-
-}
-.news{
-	height:30em;
-	padding: 3em 2em 0 2em;
-	color: $bg-primary;
-}
-
-#news-header{
-	font-family: Montserrat;
-	color: $bg-primary;
-}
-
-.news-headlines{
-	list-style: none;
-
-}
-.services{
-	background-color: none;
-	height:30em;
-	padding: 3em 2em 0 4em;
-	border-left: 1px solid black;
-}
-
-span{
-	text-align: right;
-}
-#services-header{
-	font-family: Montserrat;
-	color: $bg-primary;
-}
-.services-headlines{
-	line-height: 2em;
-	color: $bg-primary;
-}
-.services-item{
-	margin: 0 0 .2em 0;
-}
-
-.new-patient{
-	background-color: $bg-primary;
-	height:30em;
-	padding:0;
-}
-
-.new-patient-header{
-	text-align: center;
-	padding:1.5em 0 1.5em 0;
-	border: 3px solid $light-text;
-	width: 22em;
-}
-
-.new-patient-header h5{
-	font-family: Montserrat;
-	font-weight: bold;
-	color:$light-text;
-	padding:0;
-}
-.new-patient img{
-	height:25em;
-	width:21.1em;
-}
-
-.find-us{
-	background-color: gray;
-	height:10em;
-}
-
-.products-border{
-	background-color: $bg-primary;
-	height:10em;
-	padding: 1em 1em 1em 1em;
-}
-
-.products{
-	border: 2px $light-text solid;
-}
-.map{
-	background-color: gray;
-	height: 10em;
-	padding:0;
-}
-iframe{
-	height: 10em;
-	width:21em;
-}
-
-.secondary-header {
-    height: 100px;
-    display: flex;
-
-    &--title{
-        width: 100%;
-        flex: 2;
-    }
-
-    &--image{
-        width: 100%;
-        flex: 1;
-    }
+.border-left {
+    border-left: 1px solid $dark-accent;
 }
