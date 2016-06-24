@@ -1,0 +1,12 @@
+$accent-bg: $maroon;
+$accent-text: $light-text;
+$primary-bg: $light-bg;
+
+.accent {
+    background: $accent-bg;
+    color: $accent-text;
+}
+
+.primary {
+    background: $primary-bg;
+}

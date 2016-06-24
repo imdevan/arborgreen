@@ -1,0 +1,43 @@
+$flex-directions: row, column;
+$flex-sizes: 1, 2, 3;
+
+.flex {
+    display: flex;
+
+    &-inline {
+        display: inline-flex;
+    }
+
+    @each $direction in $flex-directions {
+        @each $screen, $screen-size in $screen-sizes {
+            &-#{$screen}-#{$direction} {
+                @extend .flex;
+                flex-direction: column;
+                @media (min-width: $screen-size) {
+                    flex-direction: $direction;
+                }
+            }
+        }
+    }
+
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--space-between {
+        justify-content: space-between;
+    }
+
+    @each $size in $flex-sizes {
+        @each $screen, $screen-size in $screen-sizes {
+            &-#{$screen}-#{$size} {
+                flex: 1;
+                @media (min-width: $screen-size) {
+                    flex: $size;
+                }
+            }
+        }
+    }
+}

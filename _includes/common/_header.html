@@ -1,0 +1,26 @@
+<header class="flex-md-row header">
+    <div class="flex-md-1 flex-center accent">
+        <p> logo / link home </p>
+    </div>
+    <div class="flex-md-2 flex-md-column header--side-item">
+        <div class="flex-md-3 flex">
+            <div class="flex-md-1 address flex-center">
+                <ul class="address-list">
+                    <li>17610 Preston Road</li>
+                    <li>Dallas, TX 75252</li>
+                </ul>
+            </div>
+            <div class="flex-md-1 phone flex-center">
+                <p><img class="image--icon" src="images/phone.png"/>&ensp; 972-931-0100 </p>
+            </div>
+        </div>
+        <nav class="nav flex">
+            {% for link in site.data.nav-links %}
+              <a class="nav-link flex-md-1{% if page.url contains link.href %} active{% endif %}"
+                  href="{{link.href}}">
+                  {{link.label}}
+              </a>
+              {% endfor %}
+        </nav>
+    </div>
+</header> <!-- end header-container -->

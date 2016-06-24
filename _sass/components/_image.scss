@@ -1,0 +1,14 @@
+.image {
+
+    &--full{
+        width: 100%;
+        height: auto;
+    }
+
+    &--icon {
+    	height:1.25rem;
+    	width:1.25rem;
+        display: inline-block;
+        margin-bottom: -.25rem;
+    }
+}

@@ -5,9 +5,11 @@
 
   <div class="main-container">
     <div class="container">
-    {% include common/_navigation.html %}
+    {% include common/_header.html %}
 
     {{ content }}
+
+    {% include common/_footer.html %}
 
     {% if jekyll.environment == "development" %}
         <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>

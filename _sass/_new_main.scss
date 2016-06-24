@@ -3,24 +3,39 @@
 font-family: 'Montserrat', sans-serif;*/
 $maroon: #800000;
 $bg-primary: $maroon;
+$bg-light: white;
 $light-text: white;
+$light-bg: white;
+$dark-bg: gray;
 $container-max-width: 900px;
+$yellow: #f5d76e;
+$screen-sizes: (
+    md: 700px
+);
+
 
 *{
    margin: 0;
    padding: 0;
    resize: none;
    font-family: Cairo;
+   box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 .container{
     max-width: $container-max-width;
     width: 90%;
     margin: auto;
+    background: $light-bg;
 }
 
 .main-container{
-	background-color:gray;
+	background-color: $dark-bg;
 }
 
 .header-container{
@@ -33,36 +48,10 @@ $container-max-width: 900px;
 
 }
 
-.address{
-	margin: 7% 0 0 0;
-	font-family: Cairo;
-	color: $bg-primary;
-}
-
 .address-list{
 	list-style-type: none;
 }
-.phone{
-	margin: 8% 0 0 0;
-	font-family: Cairo;
-	font-size: 1.5em;
-	color: $bg-primary;
-}
 
-.phone img{
-	height:1.5em;
-	width:1.5em;
-}
-.nav{
-	background-color: #f5d76e;
-	padding: 1em;
-	height:25%;
-}
-
-.time-pic{
-
-	height: 21em;
-}
 
 .hours{
 	height: 21em;
@@ -75,33 +64,6 @@ $container-max-width: 900px;
 .opening{
 	border-bottom: 1px black solid;
 	color: $bg-primary;
-}
-
-.times-container{
-	padding:0;
-	background-color:$light-text;
-}
-
-.times{
-	    list-style-type: none;
-	    line-height:1.25em;
-	    margin: .5em 0 0 2.3em;
-	    padding: 0 0 1.75em 0;
-
-}
-
-.time-pic{
-	padding:0;
-}
-
-.time-pic img{
-	height:100%;
-	width: 100%;
-	padding:0;
-}
-
-.times-item{
-	margin: 0 0 .2em 0;
 }
 
 .appointment{
@@ -171,6 +133,7 @@ span{
 .services-item{
 	margin: 0 0 .2em 0;
 }
+
 .new-patient{
 	background-color: $bg-primary;
 	height:30em;
@@ -195,14 +158,6 @@ span{
 	width:21.1em;
 }
 
-span{
-	height:15em;
-	width:17em;
-	margin: 0 0 15em 0;
-	position:relative;
-	background-color: black;
-	z-index:1;
-}
 .find-us{
 	background-color: gray;
 	height:10em;

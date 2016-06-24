@@ -1,4 +1,13 @@
-.header-container {
-    height: 10rem;
-    width: 100%;
+$header-height: 10rem;
+$header-min-height: 5rem;
+
+.header {
+    height: $header-height;
+    width: 100%;header-height: 5rem;
+
+
+    &--side-item {
+        background: $bg-light;
+        min-height: $header-min-height;
+    }
 }

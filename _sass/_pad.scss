@@ -1,0 +1,7 @@
+$paddings: 3;
+
+@each $pad in $paddings {
+    .pad-#{$pad}{
+        padding: $pad * 1rem;
+    }
+}

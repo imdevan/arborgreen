@@ -1,0 +1,14 @@
+$nav-bg: $yellow;
+$nav-min-height: 5rem;
+$nav-padding: 1rem;
+
+.nav{
+	background-color: $nav-bg;
+	padding: $nav-padding;
+    min-height: $nav-min-height;
+
+    // Remove this 700px
+    @media(min-width:  700px) {
+        min-height: 0;
+    }
+}
