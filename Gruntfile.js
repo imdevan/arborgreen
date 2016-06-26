@@ -60,16 +60,7 @@ module.exports = function (grunt) {
     watch: {
       html: {
         files: [
-          'index.html',
-          'projects/index.html',
-          'about/index.html',
-          'talks/index.html',
-          'blog/index.html',
-          '_posts/**/*.html',
-          '_posts/**/*.md',
-          '_projects/**/*.md',
-          '_layouts/*.html',
-          '_includes/**/*.html',
+          '**/*.html',
           '_includes/svg/*.svg'
         ],
         tasks: ['jekyll'],

@@ -1,0 +1,36 @@
+$transition-timing: 0s ease;
+$cta-text: $maroon;
+$cta-border-color: $bg-light;
+$cta-border: $bg-light 3px solid;
+$cta-border-hover: $cta-text 3px solid;
+$cta-padding: 3px;
+$cta-height: 4rem;
+
+.call-to-action {
+    @extend .accent;
+    @extend .flex;
+    @extend .flex-center;
+    transition: all $transition-timing;
+    text-decoration: none;
+    padding: $cta-padding;
+    min-height: $cta-height;
+
+    &:hover {
+        color: $cta-text;
+        background: $cta-border-color;
+
+        .call-to-action--body {
+            border: $cta-border-hover;
+        }
+    }
+
+    &--body {
+        @extend .flex;
+        @extend .flex-center;
+        width: 100%;
+        border: $cta-border;
+        transition: all $transition-timing;
+        padding: $cta-padding*2;
+        border: $cta-border;
+    }
+}

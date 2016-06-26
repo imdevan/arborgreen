@@ -5,6 +5,10 @@ $primary-bg: $light-bg;
 .accent {
     background: $accent-bg;
     color: $accent-text;
+
+    &-text {
+        color :$accent-bg;
+    }
 }
 
 .primary {
