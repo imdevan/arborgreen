@@ -1,4 +1,4 @@
-$base--box-shadow: 20px 20px 60px rgba(0,0,0,0.2), 30px 30px 80px rgba(0,0,0,0.1);
+$image-box-shadow: $box-shadow;
 $doctor-image-size: 12rem;
 $icon-image-size: 1.25rem;
 
@@ -17,7 +17,7 @@ $icon-image-size: 1.25rem;
     }
 
     &--doctor {
-        box-shadow: $base--box-shadow;
+        box-shadow: $image-box-shadow;
     	height: $doctor-image-size;
     	width: $doctor-image-size;
         border-radius: 50%;

@@ -11,10 +11,12 @@ $dark-bg: gray;
 $dark-accent: $dark-bg;
 $container-max-width: 900px;
 $yellow: #f5d76e;
+$sm-screen: 500px;
+$md-screen: 700px;
 $screen-sizes: (
     md: 700px
 );
-
+$box-shadow: 20px 20px 60px rgba(0,0,0,0.2), 30px 30px 80px rgba(0,0,0,0.1);
 *{
    margin: 0;
    padding: 0;
@@ -38,9 +40,14 @@ h5 {
 
 .container{
     max-width: $container-max-width;
-    width: 90%;
+    width: 100%;
     margin: auto;
     background: $light-bg;
+    box-shadow: $box-shadow;
+
+    @media (min-width: $sm-screen) {
+        width: 90%;
+    }
 }
 
 .main-container{
