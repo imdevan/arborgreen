@@ -19,12 +19,12 @@ $cta-height: 4rem;
         color: $cta-text;
         background: $cta-border-color;
 
-        .call-to-action--body {
+        > * {
             border: $cta-border-hover;
         }
     }
 
-    &--body {
+    > * {
         @extend .flex;
         @extend .flex-center;
         width: 100%;
