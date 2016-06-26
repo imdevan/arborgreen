@@ -1,4 +1,4 @@
-$paddings: 3;
+$paddings: 1, 3;
 
 @each $pad in $paddings {
     .pad-#{$pad}{

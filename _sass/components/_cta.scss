@@ -1,8 +1,9 @@
 $transition-timing: 0s ease;
-$cta-text: $maroon;
+$cta-text: $light-text;
+$cta-text-hover: $maroon;
 $cta-border-color: $bg-light;
 $cta-border: $bg-light 3px solid;
-$cta-border-hover: $cta-text 3px solid;
+$cta-border-hover: $cta-text-hover 3px solid;
 $cta-padding: 3px;
 $cta-height: 4rem;
 
@@ -14,10 +15,16 @@ $cta-height: 4rem;
     text-decoration: none;
     padding: $cta-padding;
     min-height: $cta-height;
+    color: $cta-text;
+
+    &:visited {
+        color: $cta-text;
+    }
 
     &:hover {
-        color: $cta-text;
+        color: $cta-text-hover;
         background: $cta-border-color;
+        text-decoration: none;
 
         > * {
             border: $cta-border-hover;

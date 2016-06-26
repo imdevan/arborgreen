@@ -1,14 +1,39 @@
-$nav-bg: $yellow;
+$nav-bg: $maroon;
 $nav-min-height: 5rem;
 $nav-padding: 1rem;
+$nav-link-hover-bg-color: darken($maroon, 10%);
+$nav-link-active-bg-color: darken($maroon, 10%);
+$nav-link-hover-color: $light-text;
+$nav-link-color: $light-text;
 
 .nav{
 	background-color: $nav-bg;
-	padding: $nav-padding;
     min-height: $nav-min-height;
 
     // Remove this 700px
     @media(min-width:  700px) {
         min-height: 0;
+    }
+
+    &-link {
+	    padding: $nav-padding;
+        text-decoration: none;
+
+        &.active {
+            background-color: $nav-link-active-bg-color;
+
+            &:visited {
+                background-color: $nav-link-active-bg-color;
+            }
+        }
+
+        &:visited {
+            color: $nav-link-color;
+        }
+
+        &:hover {
+            background: $nav-link-hover-bg-color;
+            color:  $nav-link-hover-color;
+        }
     }
 }

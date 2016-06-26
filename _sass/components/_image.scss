@@ -22,4 +22,12 @@ $icon-image-size: 1.25rem;
     	width: $doctor-image-size;
         border-radius: 50%;
     }
+
+    &--cta {
+        &-form {
+            background-image: url('/images/form_pic_gray.jpg');
+            background-blend-mode: multiply;
+            background-size: cover;
+        }
+    }
 }

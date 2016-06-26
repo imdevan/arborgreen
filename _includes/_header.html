@@ -1,24 +1,22 @@
 <header class="flex-md-row header">
     <div class="flex-md-1 flex-center accent">
         <a class="call-to-action" href="/">
-            <div class="call-to-action--body">
-                <h3>Home</h3>
-            </div>
+            <img src="http://www.arborgreenclinic.com/images/logo.png" alt="">
         </a>
     </div>
     <div class="flex-md-2 flex-md-column header--side-item">
         <div class="flex-md-3 flex">
             <div class="flex-md-1 address flex-center">
-                <ul class="address-list">
-                    <li>17610 Preston Road</li>
-                    <li>Dallas, TX 75252</li>
-                </ul>
+                {% include _address.html %}
             </div>
             <div class="flex-md-1 flex-center">
-                <p><img class="image--icon" src="images/phone.png"/>&ensp; 972-931-0100 </p>
+                <ul>
+                    <li><a href="tell://972-931-0100">972-931-0100</a></li>
+                    <li><a href="mailto:info@arborgreenclinic.com">info@arborgreenclinic.com</a></li>
+                </ul>
             </div>
         </div>
-        <nav class="nav flex">
+        <nav class="nav flex-md-row">
             {% for link in site.data.nav-links %}
               <a class="nav-link flex-md-1 flex-center{% if page.url contains link.href %} active{% endif %}"
                   href="{{link.href}}">

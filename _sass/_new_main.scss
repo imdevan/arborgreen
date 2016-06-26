@@ -5,6 +5,7 @@ $maroon: #800000;
 $bg-primary: $maroon;
 $bg-light: white;
 $light-text: white;
+$dark-text: #333;
 $accent-text: $maroon;
 $light-bg: white;
 $dark-bg: gray;
@@ -28,6 +29,7 @@ $box-shadow: 20px 20px 60px rgba(0,0,0,0.2), 30px 30px 80px rgba(0,0,0,0.1);
 html, body {
     margin: 0;
     padding: 0;
+    color: $dark-text;
 }
 
 .text--accent {
@@ -50,6 +52,23 @@ h5 {
     }
 }
 
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-text;
+
+    &:visited {
+        color: $accent-text;
+    }
+
+    &:hover {
+        color: $accent-text;
+        text-decoration: underline;
+    }
+}
 .main-container{
 	background-color: $dark-bg;
 }
