@@ -1,7 +1,0 @@
-$widths: 100;
-
-@each $width in $widths {
-    .width-#{$width}{
-        width: $width * 1%;
-    }
-}

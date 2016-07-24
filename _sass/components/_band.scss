@@ -1,0 +1,49 @@
+$band-body-max-width: $container-max-width;
+$band-body-width: 80%;
+
+.band {
+    background-size: cover;
+    background-position: center;
+
+    &__body {
+        width: $band-body-width;
+        max-width: $band-body-max-width;
+        margin: auto;
+    }
+
+
+    &--header {
+        @extend .band;
+        background-image: url("../images/face.jpg");
+
+        // background-color: black;
+        // color:white;
+    }
+
+    &--vitamins {
+        @extend .band;
+        background-image: url("../images/vitamins.jpg");
+
+        background-color: black;
+        color:white;
+    }
+
+    &--about {
+        @extend .band;
+        background-image: url("../images/staff-pic-blur.png");
+
+        color: white;
+    }
+
+    &--schedule {
+        @extend .band;
+        background-image: url("../images/staff-pic-blur.jpg");
+    }
+
+    &--contact {
+        @extend .band;
+        background-image: url("../images/clinic-blur.jpg");
+
+        color:white;
+    }
+}

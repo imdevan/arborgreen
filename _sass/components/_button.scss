@@ -1,0 +1,18 @@
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$btn-bg: $bg-primary;
+$btn-hover-bg: $bg-primary;
+
+.button {
+    border: solid 3px $btn-bg;
+    border-radius: 50px;
+    color: $btn-bg;
+    padding: .5em 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: white;
+        background: $btn-bg;
+    }
+}

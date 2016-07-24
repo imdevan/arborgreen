@@ -1,0 +1,15 @@
+$widths: 100;
+$heights: 80, 100;
+
+@each $width in $widths {
+    .width-#{$width}{
+        width: $width * 1%;
+    }
+}
+
+@each $height in $heights {
+    .height-#{$height}{
+        min-height: $height * 1vh;
+        height: 100%;
+    }
+}

@@ -1,0 +1,19 @@
+@mixin link ($color) {
+    text-decoration: none;
+    color: $color;
+
+    &:visited {
+        color: $color;
+    }
+
+    &:hover {
+        color: $color;
+        text-decoration: underline;
+    }
+}
+
+.link {
+    &--accent {
+        @include link($light-text)
+    }
+}

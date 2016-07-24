@@ -1,0 +1,28 @@
+$st-padding: 3em;
+$st-font-size: 2.5em;
+$sub-st-font-size: 2em;
+
+.section-title {
+    font-size: $st-font-size;
+
+    text-align: center;
+    width: 100%;
+    padding-top: $st-padding;
+
+    &--services {
+        @extend .section-title;
+        color: $accent-text;
+    }
+
+    &--contact {
+        @extend .section-title;
+        text-align: left;
+        padding-top: 0;
+    }
+
+    &--sub-section {
+        @extend .section-title;
+        font-size: $sub-st-font-size;
+        padding-top: 0;
+    }
+}

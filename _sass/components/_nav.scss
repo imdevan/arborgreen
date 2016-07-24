@@ -1,21 +1,32 @@
-$nav-bg: $maroon;
-$nav-min-height: 5rem;
+$nav-bg: $light-bg;
+$nav-min-height: 3rem;
 $nav-padding: 1rem;
 $nav-link-hover-bg-color: darken($maroon, 10%);
 $nav-link-active-bg-color: darken($maroon, 10%);
-$nav-link-hover-color: $light-text;
-$nav-link-color: $light-text;
+$nav-link-hover-color: $accent-text;
+$nav-link-color: $accent-text;
 
 .nav{
 	background-color: $nav-bg;
-    min-height: $nav-min-height;
+    // min-height: $nav-min-height;
+    position: fixed;
+    width: 100%;
+    // background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .0));
 
     // Remove this 700px
     @media(min-width:  700px) {
-        min-height: 0;
+        min-height: $nav-min-height;
     }
 
-    &-link {
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 0;
+    }
+
+    &__link {
+        font-size: 1rem;
 	    padding: $nav-padding;
         text-decoration: none;
 

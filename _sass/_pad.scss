@@ -3,5 +3,21 @@ $paddings: 1, 3;
 @each $pad in $paddings {
     .pad-#{$pad}{
         padding: $pad * 1rem;
+
+        &--left {
+            padding-left: $pad * 1rem;
+
+            &--responsive {
+                padding-left: 0;
+
+                @media (min-width: $responsive-screen-size) {
+                    padding-left: $pad * 1rem;
+                }
+            }
+        }
+
+        &--top {
+            padding-top: $pad * 1rem;
+        }
     }
 }

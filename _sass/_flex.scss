@@ -8,11 +8,17 @@ $flex-sizes: 1, 2, 3;
         display: inline-flex;
     }
 
+    &--space-between {
+        justify-content: space-between;
+    }
+
     @each $direction in $flex-directions {
         @each $screen, $screen-size in $screen-sizes {
             &-#{$screen}-#{$direction} {
                 @extend .flex;
                 flex-direction: column;
+
+
                 @media (min-width: $screen-size) {
                     flex-direction: $direction;
                 }
@@ -24,6 +30,16 @@ $flex-sizes: 1, 2, 3;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &--vertical {
+            @extend .flex-center;
+            justify-content: flex-start;
+        }
+
+        &--flex-end {
+            @extend .flex-center;
+            justify-content: flex-end;
+        }
     }
 
     &--space-between {

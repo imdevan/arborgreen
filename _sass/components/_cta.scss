@@ -8,7 +8,6 @@ $cta-padding: 3px;
 $cta-height: 4rem;
 
 .call-to-action {
-    @extend .accent;
     @extend .flex;
     @extend .flex-center;
     transition: all $transition-timing;
