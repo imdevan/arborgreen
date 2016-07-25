@@ -6,6 +6,11 @@ services:
     - Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
     - Wet Nose dog cat whiskers canary ball brush bedding heel stay fur bird canary vitamins birds lick mouse field barky walk. Throw bed maine coon cat Snowball collar toy field purr collar polydactyl.
     - Commands maine coon cat dinnertime brush kitten teeth ID tag stripes Snowball biscuit kitty wet nose aquarium throw roll over.
+about:
+    - Board Certified in Family Medicine
+    - Repeatedly recognized as Top Doctors by D-magazine
+    - Extensive knowledge in weight-management and the functioning of the human body
+    - She is here to help you navigate your way to your true and healthy self!
 contact:
     phone: (972) 931-0100
     email: dra@docfaa.com
@@ -66,7 +71,7 @@ nav:
         <h2 class="section-title" >Our Services</h2>
         <div class="flex-md-row pad-5--top--responsive pad-3--top--mobile">
             {% for service in page.services %}
-                <div class="flex-md-1 pad-3--responsive pad-3--top--mobile" style="font-size: 1.2em;">
+                <div class="flex-md-1 pad-3--responsive pad-3--top--mobile text--h4">
                     {{ service }}
                 </div>
             {% endfor %}
@@ -86,18 +91,13 @@ nav:
                 <h3 class="section-title--side flex-md-2 text--center--mobile">
                     Dr. Hania Alaidroos
                 </h3>
-                <span  class="flex-md-1 pad-1--top--mobile">
-                    Board Certified in Family Medicine
-                </span>
-                <span  class="flex-md-1 pad-1--top--mobile">
-                    Repeatedly recognized as Top Doctors by D-magazine
-                </span>
-                <span  class="flex-md-1 pad-1--top--mobile">
-                    Extensive knowledge in weight-management and the functioning of the human body
-                </span>
-                <span  class="flex-md-1 pad-1--top--mobile">
-                    She is here to help you navigate your way to your true and healthy self!
-                </span>
+
+                {% for point in page.about %}
+                    <span  class="flex-md-1 pad-1--top--mobile text--h4">
+                        {{ point }}
+                    </span>
+                {% endfor %}
+
             </div>
         </div>
     </div>
