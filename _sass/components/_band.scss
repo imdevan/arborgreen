@@ -23,7 +23,8 @@ $text-shadow:  0 0 30px rgba(black, .25);
         width: $band-body-width;
         max-width: $band-body-max-width;
         margin: auto;
-        z-index: 0;
+        position: relative;
+        z-index: 1;
     }
 
 
@@ -48,21 +49,20 @@ $text-shadow:  0 0 30px rgba(black, .25);
 
     &--about {
         @extend .band;
-        background-image: url("../images/staff-pic-blur.png");
+        background-image: url("../images/clinic-inside.jpg");
         color: white;
         text-shadow:$text-shadow;
     }
 
     &--schedule {
         @extend .band;
-        background-image: url("../images/staff-pic-blur.jpg");
     }
 
     &--contact {
         @extend .band;
         @include lg();
 
-        background-image: url("../images/clinic-blur.jpg");
+        background-image: url("../images/staff-pic-blur.png");
         color:white;
         text-shadow:$text-shadow;
     }
