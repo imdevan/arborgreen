@@ -13,4 +13,12 @@
             }
         }
     }
+
+    &--lg {
+        &--responsive {
+            @media (min-width: $responsive-screen-size) {
+                font-size: 4em;
+            }
+        }
+    }
 }

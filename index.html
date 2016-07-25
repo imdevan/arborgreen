@@ -42,7 +42,7 @@ nav:
                 {% include svg/logo.svg %}
             </figure>
             <figcaption>
-                <h1>{{ page.title }}</h1>
+                <h1 class="text--lg--responsive">{{ page.title }}</h1>
                 <hr>
                 <h3>{{ page.subTitle }}</h3>
             </figcaption>
@@ -64,9 +64,9 @@ nav:
 <section class="band" id="services">
     <div class="band__body">
         <h2 class="section-title" >Our Services</h2>
-        <div class="flex-md-row pad-5--top">
+        <div class="flex-md-row pad-5--top--responsive pad-3--top--mobile">
             {% for service in page.services %}
-                <div class="flex-md-1 pad-3" style="font-size: 1.2em;">
+                <div class="flex-md-1 pad-3--responsive pad-3--top--mobile" style="font-size: 1.2em;">
                     {{ service }}
                 </div>
             {% endfor %}

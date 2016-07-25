@@ -5,8 +5,6 @@ $paddings: 1, 2, 3, 5;
         padding: $pad * 1rem;
 
         &--responsive {
-            padding: 0;
-
             @media (min-width: $responsive-screen-size) {
                 padding: $pad * 1rem;
             }
@@ -32,7 +30,6 @@ $paddings: 1, 2, 3, 5;
                     padding-top: $pad * 1rem;
                 }
             }
-
 
             &--responsive {
                 @media (min-width: $responsive-screen-size) {
