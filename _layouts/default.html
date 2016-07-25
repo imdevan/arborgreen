@@ -6,13 +6,7 @@
     {{ content }}
 
     {% include _footer.html %}
-    <script type="text/javascript" src="js/main.js"></script>
 
-    {% if jekyll.environment == "development" %}
-        <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>
-    {% else %}
-        <script type="text/javascript" src="{{site.url}}/js/main.js"></script>
-    {% endif %}
-
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
