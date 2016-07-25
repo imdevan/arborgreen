@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include _head.html %}
-<body ontouchstart="">
+<body ontouchstart=""  onload="init()">
 
     {{ content }}
 
     {% include _footer.html %}
+    <script type="text/javascript" src="js/main.js"></script>
 
     {% if jekyll.environment == "development" %}
         <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script>

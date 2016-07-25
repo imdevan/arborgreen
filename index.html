@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Weight Melt
+subTitle: The Healthier, Happier You, Program
 services:
     - Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
     - Wet Nose dog cat whiskers canary ball brush bedding heel stay fur bird canary vitamins birds lick mouse field barky walk. Throw bed maine coon cat Snowball collar toy field purr collar polydactyl.
@@ -8,55 +10,63 @@ contact:
     phone: (972) 931-0100
     email: dra@docfaa.com
 nav:
-    - label: home
+    - label: Home
       id: home
-    - label: about
+    - label: About
       id: about
-    - label: schedule
+    - label: Schedule
       id: schedule
-    - label: contact
+    - label: Contact
       id: contact
 ---
 
-<header class="band--header" id="home">
-    <nav class="nav">
-        <ul class="nav__list">
-            {% for link in page.nav %}
-                <a href="#{{ link.id }}"  class="nav__link"><li class="nav__item">{{ link.label }}</li></a>
-            {% endfor %}
-        </ul>
-    </nav>
+<nav class="nav">
+    <ul class="nav__list">
+        {% for link in page.nav %}
+            <a href="#{{ link.id }}"  class="nav__link"><li class="nav__item">
+                {% if link.label == page.nav.first.label %}
+                  {% include svg/logo.svg %}
+                {% else %}
+                    {{ link.label }}
+                {% endif %}
 
-    <section class="band__body flex-md-column flex-center height-80 text--accent">
+            </li></a>
+        {% endfor %}
+    </ul>
+</nav>
+
+<header class="band--header  flex-center" id="home">
+    <section class="band__body flex-md-column flex-center text--accent">
         <div class="flex-center--vertical" style="width: 100%;">
             <figure style="width: 10rem; height: auto;" >
                 {% include svg/logo.svg %}
             </figure>
             <figcaption>
-                <h1>Weight Melt</h1>
+                <h1>{{ page.title }}</h1>
                 <hr>
-                <h3>The Healthier, Happier You, Program</h3>
+                <h3>{{ page.subTitle }}</h3>
             </figcaption>
         </div>
-        <div>
-            <a class="button">Schedule an appointment</a>
+        <div class="pad-3--top">
+            {% include _cta.html %}
         </div>
     </section>
 </header>
 
-<section class="band--vitamins height-80">
-    <div class="band__body">
-        <h2 class="section-title">Featured Vitamins</h2>
-        <h3>Supplements and Vitamins sold through the office</h3>
+<section class="band--vitamins  flex-center">
+    <div class="gradient-bg"></div>
+    <div class="band__body flex-center flex-md-column">
+        <h2 class="section-title text--center">Featured Vitamins</h2>
+        <h3 class="text--center">Supplements and Vitamins sold through the office</h3>
     </div>
 </section>
 
-<section class="band height-80" id="services">
+<section class="band" id="services">
     <div class="band__body">
         <h2 class="section-title" >Our Services</h2>
-        <div class="flex-md-row pad-3--top">
+        <div class="flex-md-row pad-5--top">
             {% for service in page.services %}
-                <div class="flex-md-1 pad-3" style="font-size: 1.5em; font-weight: 200;">
+                <div class="flex-md-1 pad-3" style="font-size: 1.2em;">
                     {{ service }}
                 </div>
             {% endfor %}
@@ -64,59 +74,87 @@ nav:
     </div>
 </section>
 
-<section class="band--about height-80" id="about">
+<section class="band--about" id="about">
     <div class="band__body">
         <h2 class="section-title">Meet your Doctor</h2>
+        <div class="flex-md-row pad-3--top--mobile pad-5--top--responsive">
+            <div class="flex-md-1 flex-center">
+                <div class="image--doctor"></div>
+            </div>
+            <div class="flex-md-1 pad-3--left--responsive pad-3--top--mobile flex-md-column flex--space-between">
+                <h3 class="section-title--side flex-md-2 text--center--mobile">
+                    Dr. Hania Alaidroos
+                </h3>
+                <span  class="flex-md-1 pad-1--top--mobile">
+                    Board Certified in Family Medicine
+                </span>
+                <span  class="flex-md-1 pad-1--top--mobile">
+                    Repeatedly recognized as Top Doctors by D-magazine
+                </span>
+                <span  class="flex-md-1 pad-1--top--mobile">
+                    Extensive knowledge in weight-management and the functioning of the human body
+                </span>
+                <span  class="flex-md-1 pad-1--top--mobile">
+                    She is here to help you navigate your way to your true and healthy self!
+                </span>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="band--schedule height-80" id="schedule">
+<section class="band--schedule" id="schedule">
     <div class="band__body">
         <h2 class="section-title">
-            Schedule an appointment today
+            Schedule an Appointment
         </h2>
-        <div class="flex-md-row pad-3--top">
+        <div class="flex-md-row pad-5--top">
             <div class="flex-md-1 flex-center">
-                <a class="button">Schedule an appointment</a>
+                {% include _cta.html %}
             </div>
             <div class="flex-md-1 pad-3">
                 <h3 class="section-title--sub-section">Open Hours</h3>
-                <ul>
-                    {% for time in site.data.time %}
-                        <li class="flex-inline flex--space-between width-100">
-                            <span>{{ time.day }}</span>
-                            <span>{{ time.hours }}</span>
-                        </li>
-                    {% endfor %}
-                </ul>
+                <div class="pad-2--top--mobile">
+                    <ul class="pad-3--responsive">
+                        {% for time in site.data.time %}
+                            <li class="flex-inline flex--space-between width-100">
+                                <span>{{ time.day }}</span>
+                                <span>{{ time.hours }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="band--contact height-80 flex-center flex-md-column" id="contact">
-    <div class="band__body flex-md-row">
-        <div class="flex-md-1">
+<section class="band--contact flex-center flex-md-column" id="contact">
+    <div class="gradient-bg"></div>
+    <div class="band__body flex-md-row--reverse">
+        <div class="flex-md-1 pad-3--top--mobile">
             {% include _map.html %}
         </div>
-        <div class="flex-md-1 pad-3--left--responsive flex-md-column flex--space-between">
-            <h2 class="section-title--contact">Contact Us</h2>
-            <a class="link--accent" href="mailto:{{ page.contact.email }}">
+        <div class="flex-md-1 pad-3--left--responsive flex-md-column flex--space-around">
+            <h2 class="section-title--side">Contact Us</h2>
+            <a class="link--accent flex-md-1 flex-center--vertical pad-1--top--mobile"
+                href="mailto:{{ page.contact.email }}"
+                target="_blank">
                 {{ page.contact.email }}
             </a>
-            <a class="link--accent" href="tel://{{ page.contact.phone }}">
+            <a class="link--accent flex-md-1 flex-center--vertical pad-1--top--mobile"
+                href="tel://{{ page.contact.phone }}"
+                target="_blank">
                 {{ page.contact.phone }}
             </a>
-            <a class="link--accent"href="">
-                <address>
-                    ARBOR GREEN FAMILY MEDICAL CLINIC,<br>
-                    17610 PRESTON ROAD, DALLAS TX, 75252
-                </address>
+            <a class="link--accent flex-md-2 flex-center--vertical pad-1--top--mobile"
+                href="https://goo.gl/maps/YfvWRqSFxp82"
+                target="_blank">
+                {% include _address.html %}
             </a>
         </div>
     </div>
 
-    <div class="band__body text--center">
+    <div class="band__body text--center pad-3--top--mobile">
         Conveniently located at Arbor Green Family Medicine on
         Preston Road in North Dallas
     </div>

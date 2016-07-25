@@ -21,6 +21,16 @@ $icon-image-size: 1.25rem;
     	height: $doctor-image-size;
     	width: $doctor-image-size;
         border-radius: 50%;
+        background-image: url("../images/hania-head-shot.jpg");
+        background-size: cover;
+
+        @media (min-width: $responsive-screen-size) {
+            width: 100%;
+            height: 500px;
+            border-radius: 0%;
+            background-image: url("../images/hania.jpg");
+        }
+
     }
 
     &--cta {

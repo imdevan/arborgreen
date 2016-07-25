@@ -10,8 +10,21 @@ $btn-hover-bg: $bg-primary;
     padding: .5em 1em;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
 
-    &:hover {
+    &:visited {
+        color: $btn-bg;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+            background: $btn-bg;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
         color: white;
         background: $btn-bg;
     }

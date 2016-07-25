@@ -1,34 +1,51 @@
-$nav-bg: $light-bg;
-$nav-min-height: 3rem;
+$nav-bg-initial: transparent;
+$nav-bg-scroll: $light-bg;
 $nav-padding: 1rem;
 $nav-link-hover-bg-color: darken($maroon, 10%);
 $nav-link-active-bg-color: darken($maroon, 10%);
-$nav-link-hover-color: $accent-text;
+$nav-link-hover-color: $light-text;
 $nav-link-color: $accent-text;
 
-.nav{
-	background-color: $nav-bg;
-    // min-height: $nav-min-height;
-    position: fixed;
-    width: 100%;
-    // background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .0));
+body {
+    // padding-top: $nav-height;
+}
 
-    // Remove this 700px
-    @media(min-width:  700px) {
-        min-height: $nav-min-height;
+.nav{
+	background-color: $nav-bg-initial;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background .3s ease-in-out, box-shadow .3s ease-in-out;
+    z-index: 100;
+
+    &--scrolled {
+        background-color: $nav-bg-scroll;
+        box-shadow: 0 0 40px rgba(black, .3);
     }
 
     &__list {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         font-size: 0;
+    }
+
+    &__item:first-child {
+        min-width: 1em;
+
+        &:hover {
+            background-color: none;
+        }
     }
 
     &__link {
         font-size: 1rem;
 	    padding: $nav-padding;
         text-decoration: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $nav-link-color;
 
         &.active {
             background-color: $nav-link-active-bg-color;

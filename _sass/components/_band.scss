@@ -1,38 +1,56 @@
 $band-body-max-width: $container-max-width;
 $band-body-width: 80%;
+$band-height-sm: 500px;
+$band-height-lg: 90vh;
+$text-shadow:  0 0 30px rgba(black, .25);
+
+@mixin lg() {
+    min-height: $band-height-sm;
+
+    @media (min-width: $responsive-screen-size) {
+        min-height: $band-height-lg;
+    }
+
+}
 
 .band {
     background-size: cover;
     background-position: center;
+    position: relative;
+    padding: 5rem 0;
 
     &__body {
         width: $band-body-width;
         max-width: $band-body-max-width;
         margin: auto;
+        z-index: 0;
     }
 
 
     &--header {
         @extend .band;
-        background-image: url("../images/face.jpg");
+        @include lg();
 
-        // background-color: black;
-        // color:white;
+        background-image: url("../images/face.jpg");
+        background-position: right;
+        padding-top: $nav-height;
     }
 
     &--vitamins {
         @extend .band;
-        background-image: url("../images/vitamins.jpg");
+        @include lg();
 
+        background-image: url("../images/vitamins.jpg");
         background-color: black;
         color:white;
+        text-shadow:$text-shadow;
     }
 
     &--about {
         @extend .band;
         background-image: url("../images/staff-pic-blur.png");
-
         color: white;
+        text-shadow:$text-shadow;
     }
 
     &--schedule {
@@ -42,8 +60,20 @@ $band-body-width: 80%;
 
     &--contact {
         @extend .band;
-        background-image: url("../images/clinic-blur.jpg");
+        @include lg();
 
+        background-image: url("../images/clinic-blur.jpg");
         color:white;
+        text-shadow:$text-shadow;
     }
+}
+
+.gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(gray, .3), rgba(black, .4));
+    z-index: 0;
 }

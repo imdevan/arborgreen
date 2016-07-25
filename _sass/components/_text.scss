@@ -6,5 +6,11 @@
 
     &--center {
         text-align: center;
+
+        &--mobile {
+            @media (max-width: $responsive-screen-size) {
+                text-align: center;
+            }
+        }
     }
 }
