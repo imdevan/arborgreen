@@ -37,5 +37,21 @@ $paddings: 1, 2, 3, 5;
                 }
             }
         }
+
+        &--bottom {
+            padding-bottom: $pad * 1rem;
+
+            &--mobile {
+                @media (max-width: $responsive-screen-size) {
+                    padding-bottom: $pad * 1rem;
+                }
+            }
+
+            &--responsive {
+                @media (min-width: $responsive-screen-size) {
+                    padding-bottom: $pad * 1rem;
+                }
+            }
+        }
     }
 }

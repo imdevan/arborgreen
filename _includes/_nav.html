@@ -1,0 +1,13 @@
+<nav class="nav">
+    <ul class="nav__list">
+        {% for link in page.nav %}
+            <a href="#{{ link.id }}"  class="nav__link"><li class="nav__item">
+                {% if link.label == page.nav.first.label %}
+                  {% include svg/logo.svg %}
+                {% else %}
+                    {{ link.label }}
+                {% endif %}
+            </li></a>
+        {% endfor %}
+    </ul>
+</nav>

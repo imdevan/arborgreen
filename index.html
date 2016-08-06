@@ -3,9 +3,16 @@ layout: default
 title: Weight Melt
 subTitle: The Healthier, Happier You, Program
 services:
-    - Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
-    - Wet Nose dog cat whiskers canary ball brush bedding heel stay fur bird canary vitamins birds lick mouse field barky walk. Throw bed maine coon cat Snowball collar toy field purr collar polydactyl.
-    - Commands maine coon cat dinnertime brush kitten teeth ID tag stripes Snowball biscuit kitty wet nose aquarium throw roll over.
+    - image: waist.jpg
+      image-style: image--shadow
+      text: Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
+    - image: scale.jpg
+      image-style: image--shadow
+      text: Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
+    - image: tape-effect.png
+      text: Wet Nose dog cat whiskers canary ball brush bedding heel stay fur bird canary vitamins birds lick mouse field barky walk. Throw bed maine coon cat Snowball collar toy field purr collar polydactyl.
+    - image: apple-effect.png
+      text: Commands maine coon cat dinnertime brush kitten teeth ID tag stripes Snowball biscuit kitty wet nose aquarium throw roll over.
 about:
     - Board Certified in Family Medicine
     - Repeatedly recognized as Top Doctors by D-magazine
@@ -25,31 +32,15 @@ nav:
       id: contact
 ---
 
-<nav class="nav">
-    <ul class="nav__list">
-        {% for link in page.nav %}
-            <a href="#{{ link.id }}"  class="nav__link"><li class="nav__item">
-                {% if link.label == page.nav.first.label %}
-                  {% include svg/logo.svg %}
-                {% else %}
-                    {{ link.label }}
-                {% endif %}
-
-            </li></a>
-        {% endfor %}
-    </ul>
-</nav>
-
 <header class="band--header  flex-center" id="home">
     <section class="band__body flex-md-column flex-center text--accent">
-        <div class="flex-center--vertical" style="width: 100%;">
+        <div class="flex-center" style="width: 100%;">
             <figure style="width: 10rem; height: auto;" >
                 {% include svg/logo.svg %}
             </figure>
             <figcaption>
-                <h1 class="text--lg--responsive">{{ page.title }}</h1>
-                <hr>
-                <h3>{{ page.subTitle }}</h3>
+                <h1 class="text--lg--responsive text--cursive pad-1--bottom--responsive underline">{{ page.title }}</h1>
+                <h3 class="pad-1--top">{{ page.subTitle }}</h3>
             </figcaption>
         </div>
         <div class="pad-3--top">
@@ -58,23 +49,30 @@ nav:
     </section>
 </header>
 
-<section class="band--vitamins  flex-center">
-    <div class="gradient-bg"></div>
-    <div class="band__body flex-center flex-md-column">
-        <h2 class="section-title text--center">Featured Vitamins</h2>
-        <h3 class="text--center">Supplements and Vitamins sold through the office</h3>
-    </div>
-</section>
-
 <section class="band" id="services">
     <div class="band__body">
-        <h2 class="section-title" >Our Services</h2>
-        <div class="flex-md-row pad-5--top--responsive pad-3--top--mobile">
-            {% for service in page.services %}
-                <div class="flex-md-1 pad-3--responsive pad-3--top--mobile text--h4">
-                    {{ service }}
-                </div>
-            {% endfor %}
+        <h2 class="section-title" >Our <span class="text--accent">Services</span></h2>
+        <div class=" pad-5--top--responsive pad-3--top--mobile">
+                {% for service in page.services %}
+                    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+                    <div class="pad-5--top flex-center flex-md-row {% if thecycle == 'odd' %}flex--reverse--mobile{% endif %}">
+                        {% if thecycle == 'odd' %}
+                            <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--responsive">
+                                {{ service.text }}
+                            </h4> 
+                            <div class="flex-md-1">
+                                <img src="./images/{{ service.image }}" alt="" class="image--full {{ service.image-style }}">
+                            </div>
+                        {% else %}
+                            <div class="flex-md-1">
+                                <img src="./images/{{ service.image }}" alt="" class="image--full {{ service.image-style }}">
+                            </div>
+                            <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--responsive">
+                                {{ service.text }}
+                            </h4> 
+                        {% endif %}
+                    </div>
+                {% endfor %}
         </div>
     </div>
 </section>
@@ -89,15 +87,13 @@ nav:
             </div>
             <div class="flex-md-1 pad-3--left--responsive pad-3--top--mobile flex-md-column flex--space-between">
                 <h3 class="section-title--side flex-md-2 text--center--mobile">
-                    Dr. Hania Alaidroos
+                    Hania Alaidroos, MD
                 </h3>
-
                 {% for point in page.about %}
                     <span  class="flex-md-1 pad-1--top--mobile text--h4">
                         {{ point }}
                     </span>
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -106,14 +102,15 @@ nav:
 <section class="band--schedule" id="schedule">
     <div class="band__body">
         <h2 class="section-title">
-            Schedule an Appointment
+            <span class="text--accent">Schedule</span> an Appointment
         </h2>
         <div class="flex-md-row pad-5--top">
-            <div class="flex-md-1 flex-center">
+            <div class="flex-md-1 flex-center flex-md-column">
+                {% include svg/logo-200.svg %}
                 {% include _cta.html %}
             </div>
             <div class="flex-md-1 pad-3">
-                <h3 class="section-title--sub-section">Open Hours</h3>
+                <h3 class="section-title--sub-section"><span class="text--accent">Open</span> Hours</h3>
                 <div class="pad-2--top--mobile">
                     <ul class="pad-3--responsive">
                         {% for time in site.data.time %}
@@ -129,25 +126,29 @@ nav:
     </div>
 </section>
 
-<section class="band--contact flex-center flex-md-column" id="contact">
+<section class="band--staff flex-md-column flex--just-end">
     <div class="gradient-bg"></div>
+    <h2 class="section-title text--center" style="z-index: 1">Our amazing staff is here to help you reach your goals</h2>
+</section>
+
+<section class="band--contact flex-center flex-md-column" id="contact">
     <div class="band__body flex-md-row--reverse">
-        <div class="flex-md-1 pad-3--top--mobile">
+        <div class="pad-3--top--mobile">
             {% include _map.html %}
         </div>
-        <div class="flex-md-1 pad-3--left--responsive flex-md-column flex--space-around">
-            <h2 class="section-title--side">Contact Us</h2>
-            <a class="link--accent flex-md-1 flex-center--vertical pad-1--top--mobile"
+        <div class="pad-3--left--responsive flex-md-column flex--space-around">
+            <h2 class="section-title--side"><span class="text--accent">Contact</span> Us</h2>
+            <a class="link flex-md-1 flex-center--vertical pad-1--top--mobile"
                 href="mailto:{{ page.contact.email }}"
                 target="_blank">
                 {{ page.contact.email }}
             </a>
-            <a class="link--accent flex-md-1 flex-center--vertical pad-1--top--mobile"
+            <a class="link flex-md-1 flex-center--vertical pad-1--top--mobile"
                 href="tel://{{ page.contact.phone }}"
                 target="_blank">
                 {{ page.contact.phone }}
             </a>
-            <a class="link--accent flex-md-2 flex-center--vertical pad-1--top--mobile"
+            <a class="link flex-md-2 flex-center--vertical pad-1--top--mobile"
                 href="https://goo.gl/maps/YfvWRqSFxp82"
                 target="_blank">
                 {% include _address.html %}
@@ -158,5 +159,17 @@ nav:
     <div class="band__body text--center pad-3--top--mobile">
         Conveniently located at Arbor Green Family Medicine on
         Preston Road in North Dallas
+    </div>
+</section>
+
+<section class="band  flex-center">
+    <div class="band__body flex-center flex-md-row">
+        <div class="width-50">
+            <img class="image--full image--shadow" src="./images/vitamins.jpg" alt="">
+        </div>
+        <div class="pad-3--left--responsive pad-3--top--mobile">
+            <h2 class="section-title--side--responsive">Featured Vitamins</h2>
+            <h3 class="">Supplements and Vitamins sold through the office</h3>
+        </div>
     </div>
 </section>

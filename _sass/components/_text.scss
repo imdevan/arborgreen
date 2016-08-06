@@ -1,7 +1,10 @@
 .text {
-
     &--accent {
         color: $accent-text;
+    }
+
+    &--cursive {
+        font-family: 'Dancing Script', cursive;
     }
 
     &--center {
@@ -15,14 +18,14 @@
     }
 
     &--lg {
+        font-size: 5em;
+
         &--responsive {
+            font-size: 2em;
+    
             @media (min-width: $responsive-screen-size) {
-                font-size: 4em;
+                font-size: 5em;
             }
         }
-    }
-
-    &--h4 {
-        font-size: 1.2em;
     }
 }

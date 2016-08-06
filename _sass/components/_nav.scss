@@ -5,20 +5,26 @@ $nav-link-hover-bg-color: darken($maroon, 10%);
 $nav-link-active-bg-color: darken($maroon, 10%);
 $nav-link-hover-color: $light-text;
 $nav-link-color: $accent-text;
-
-body {
-    // padding-top: $nav-height;
+@mixin mobileNavView($screen-size) {
+    @media (max-width: $screen-size) {
+        background-color: $nav-bg-scroll;
+        box-shadow: 0 0 13px rgba(black, .3);
+    }
 }
 
 .nav{
+    @include mobileNavView($responsive-screen-size);
 	background-color: $nav-bg-initial;
+
+    transition: background .3s ease-in-out, box-shadow .3s ease-in-out;
     position: fixed;
     top: 0;
     width: 100%;
-    transition: background .3s ease-in-out, box-shadow .3s ease-in-out;
     z-index: 100;
 
     &--scrolled {
+        @include mobileNavView($responsive-screen-size);
+
         background-color: $nav-bg-scroll;
         box-shadow: 0 0 40px rgba(black, .3);
     }

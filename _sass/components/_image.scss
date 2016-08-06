@@ -15,7 +15,11 @@ $icon-image-size: 1.25rem;
         display: inline-block;
         margin-bottom: -.25rem;
     }
-
+    
+    &--shadow {
+        box-shadow: $image-box-shadow;
+    }
+    
     &--doctor {
         box-shadow: $image-box-shadow;
     	height: $doctor-image-size;

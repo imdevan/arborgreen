@@ -10,7 +10,6 @@ $text-shadow:  0 0 30px rgba(black, .25);
     @media (min-width: $responsive-screen-size) {
         min-height: $band-height-lg;
     }
-
 }
 
 .band {
@@ -27,21 +26,25 @@ $text-shadow:  0 0 30px rgba(black, .25);
         z-index: 1;
     }
 
-
     &--header {
         @extend .band;
         @include lg();
 
         background-image: url("../images/face.jpg");
-        background-position: right;
+        background-position: 100% 50%;
         padding-top: $nav-height;
+
+        @media (max-width: $responsive-screen-size) {
+            padding-top: $nav-height * 2;
+            background-position: 100% 80%;
+        }
     }
 
-    &--vitamins {
+    &--staff {
         @extend .band;
         @include lg();
 
-        background-image: url("../images/vitamins.jpg");
+        background-image: url("../images/staff.jpg");
         background-color: black;
         color:white;
         text-shadow:$text-shadow;
@@ -61,10 +64,6 @@ $text-shadow:  0 0 30px rgba(black, .25);
     &--contact {
         @extend .band;
         @include lg();
-
-        background-image: url("../images/staff-pic-blur.png");
-        color:white;
-        text-shadow:$text-shadow;
     }
 }
 

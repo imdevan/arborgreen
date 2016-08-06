@@ -2,7 +2,7 @@ $maroon: #800000;
 $bg-primary: $maroon;
 $bg-light: white;
 $light-text: white;
-$dark-text: #333;
+$dark-text: #444;
 $accent-text: $maroon;
 $light-bg: white;
 $dark-bg: gray;
@@ -26,7 +26,9 @@ $container-max-width: 900px;
    margin: 0;
    padding: 0;
    resize: none;
-   font-family: Helvetica;
+   // font-family: Helvetica;
+   font-family: 'Open Sans', Helvetica, sans-serif;
+
    font-weight: 200;
    box-sizing: border-box;
 }

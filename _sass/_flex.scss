@@ -9,10 +9,9 @@ $flex-sizes: 1, 2, 3;
     }
 
     &--reverse {
-
         &--mobile {
             @media (max-width: $responsive-screen-size) {
-                flex-direction: column-reverse;
+                flex-direction: column-reverse !important;
             }
         }
     }
@@ -21,12 +20,15 @@ $flex-sizes: 1, 2, 3;
         justify-content: space-between;
     }
 
+    &--just-end {
+        justify-content: flex-end;
+    }
+
     @each $direction in $flex-directions {
         @each $screen, $screen-size in $screen-sizes {
             &-#{$screen}-#{$direction} {
                 @extend .flex;
                 flex-direction: column;
-
 
                 @media (min-width: $screen-size) {
                     flex-direction: $direction;

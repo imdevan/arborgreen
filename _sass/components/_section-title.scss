@@ -15,6 +15,13 @@ $sub-st-font-size: 2em;
     &--side {
         @extend .section-title;
         text-align: left;
+
+        &--responsive {
+            @extend .section-title;
+            @media (min-width: $responsive-screen-size) {
+                text-align: left;
+            }
+        }
     }
 
     &--sub-section {
