@@ -4,14 +4,12 @@ title: Weight Melt
 subTitle: The Healthier, Happier You, Program
 services:
     - image: waist.jpg
-      image-style: image--shadow
       text: Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
     - image: scale.jpg
-      image-style: image--shadow
       text: Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
-    - image: tape-effect.png
+    - image: tape.jpg
       text: Wet Nose dog cat whiskers canary ball brush bedding heel stay fur bird canary vitamins birds lick mouse field barky walk. Throw bed maine coon cat Snowball collar toy field purr collar polydactyl.
-    - image: apple-effect.png
+    - image: apple.jpg
       text: Commands maine coon cat dinnertime brush kitten teeth ID tag stripes Snowball biscuit kitty wet nose aquarium throw roll over.
 about:
     - Board Certified in Family Medicine
@@ -22,10 +20,8 @@ contact:
     phone: (972) 931-0100
     email: dra@docfaa.com
 nav:
-    - label: Home
-      id: home
     - label: About
-      id: about
+      id: home
     - label: Schedule
       id: schedule
     - label: Contact
@@ -61,17 +57,17 @@ nav:
                         {% if thecycle == 'odd' %}
                             <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--responsive">
                                 {{ service.text }}
-                            </h4> 
+                            </h4>
                             <div class="flex-md-1">
-                                <img src="./images/{{ service.image }}" alt="" class="image--full {{ service.image-style }}">
+                                <img src="./images/{{ service.image }}" alt="" class="image--full image--shadow">
                             </div>
                         {% else %}
                             <div class="flex-md-1">
-                                <img src="./images/{{ service.image }}" alt="" class="image--full {{ service.image-style }}">
+                                <img src="./images/{{ service.image }}" alt="" class="image--full image--shadow">
                             </div>
                             <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--responsive">
                                 {{ service.text }}
-                            </h4> 
+                            </h4>
                         {% endif %}
                     </div>
                 {% endfor %}
