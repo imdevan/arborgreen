@@ -61,6 +61,7 @@ module.exports = function (grunt) {
       html: {
         files: [
           '**/*.html',
+          'data/**/*.yml',
           '_includes/svg/*.svg'
         ],
         tasks: ['jekyll'],

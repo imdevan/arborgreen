@@ -2,20 +2,6 @@
 layout: default
 title: Weight Melt
 subTitle: The Healthier, Happier You, Program
-services:
-    - image: waist.jpg
-      text: Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
-    - image: scale.jpg
-      text: Puppy kitty ipsum dolor sit good dog water dog play running chirp tuxedo wag tail finch stick catch vaccine small animals mittens. Scratcher lick ferret turtle paws speak yawn Rover lol catz finch barky scratch.
-    - image: tape.jpg
-      text: Wet Nose dog cat whiskers canary ball brush bedding heel stay fur bird canary vitamins birds lick mouse field barky walk. Throw bed maine coon cat Snowball collar toy field purr collar polydactyl.
-    - image: apple.jpg
-      text: Commands maine coon cat dinnertime brush kitten teeth ID tag stripes Snowball biscuit kitty wet nose aquarium throw roll over.
-about:
-    - Board Certified in Family Medicine
-    - Repeatedly recognized as Top Doctors by D-magazine
-    - Extensive knowledge in weight-management and the functioning of the human body
-    - She is here to help you navigate your way to your true and healthy self!
 contact:
     phone: (972) 931-0100
     email: dra@docfaa.com
@@ -51,11 +37,11 @@ nav:
     <div class="band__body">
         <h2 class="section-title" >Our <span class="text--accent">Services</span></h2>
         <div class=" pad-5--top--responsive pad-3--top--mobile">
-                {% for service in page.services %}
+                {% for service in site.data.services %}
                     {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
                     <div class="pad-5--top flex-center flex-md-row {% if thecycle == 'odd' %}flex--reverse--mobile{% endif %}">
                         {% if thecycle == 'odd' %}
-                            <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--responsive">
+                            <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--right--responsive">
                                 {{ service.text }}
                             </h4>
                             <div class="flex-md-1">
@@ -65,7 +51,7 @@ nav:
                             <div class="flex-md-1">
                                 <img src="./images/{{ service.image }}" alt="" class="image--full image--shadow">
                             </div>
-                            <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--responsive">
+                            <h4 class="flex-md-1 pad-3--top--mobile text--h4 pad-3--left--responsive">
                                 {{ service.text }}
                             </h4>
                         {% endif %}
@@ -75,7 +61,7 @@ nav:
     </div>
 </section>
 
-<section class="band--about" id="">
+<section class="band--about text--shadow" id="">
     <div class="gradient-bg"></div>
     <div class="band__body">
         <h2 class="section-title">Meet your Doctor</h2>
@@ -84,14 +70,16 @@ nav:
                 <div class="image--doctor"></div>
             </div>
             <div class="flex-md-1 pad-3--left--responsive pad-3--top--mobile flex-md-column flex--space-between">
-                <h3 class="section-title--side flex-md-2 text--center--mobile">
-                    Hania Alaidroos, MD
+                <h3 class="section-title--side text--center--mobile">
+                    {{ site.data.about.clientName }}
                 </h3>
-                {% for point in page.about %}
-                    <span  class="flex-md-1 pad-1--top--mobile text--h4">
-                        {{ point }}
-                    </span>
-                {% endfor %}
+                <span  class="flex-md-1
+                    flex-center--vertical
+                    pad-1--top--mobile
+                    text--md--responsive
+                    text--thin">
+                    {{ site.data.about.description }}
+                </span>
             </div>
         </div>
     </div>
@@ -124,17 +112,17 @@ nav:
     </div>
 </section>
 
-<section class="band--staff flex-md-column flex--just-end">
+<section class="band--staff flex-md-column flex--just-end  text--shadow">
     <div class="gradient-bg"></div>
     <h2 class="section-title text--center" style="z-index: 1">Our amazing staff is here to help you reach your goals</h2>
 </section>
 
 <section class="band--contact flex-center flex-md-column" id="contact">
-    <div class="band__body flex-md-row--reverse">
-        <div class="pad-3--top--mobile">
+    <div class="band__body flex flex-md-row--reverse">
+        <div class="pad-3--top--mobile flex-md-1 flex-center">
             {% include _map.html %}
         </div>
-        <div class="pad-3--left--responsive flex-md-column flex--space-around">
+        <div class=" flex-md-1 flex-md-column flex--space-around pad-3--left--responsive">
             <h2 class="section-title--side"><span class="text--accent">Contact</span> Us</h2>
             <a class="link flex-md-1 flex-center--vertical pad-1--top--mobile"
                 href="mailto:{{ page.contact.email }}"
@@ -166,8 +154,8 @@ nav:
             <img class="image--full image--shadow" src="./images/vitamins.jpg" alt="">
         </div>
         <div class="pad-3--left--responsive pad-3--top--mobile">
-            <h2 class="section-title--side--responsive">Featured Vitamins</h2>
-            <h3 class="">Supplements and Vitamins sold through the office</h3>
+            <a href="http://uscriptives.com/Redirect.aspx?PhyPin=DATX1512" class="link"><h2 class="section-title--side--responsive">Uscriptives Vitamins</h2></a>
+            <h3 class="">Pharmaceutical grade vitamins and supplements. Speak with Dr Alaidroos about which ones are best for you. </h3>
         </div>
     </div>
 </section>

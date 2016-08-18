@@ -1,4 +1,5 @@
 $paddings: 1, 2, 3, 5;
+$positions: "top", "left", "right", "bottom";
 
 @each $pad in $paddings {
     .pad-#{$pad}{
@@ -10,46 +11,21 @@ $paddings: 1, 2, 3, 5;
             }
         }
 
-        &--left {
-            padding-left: $pad * 1rem;
 
-            &--responsive {
-                padding-left: 0;
+        @each $position in $positions {
+            &--#{$position} {
+                padding-#{$position}: $pad * 1rem;
 
-                @media (min-width: $responsive-screen-size) {
-                    padding-left: $pad * 1rem;
+                &--mobile {
+                    @media (max-width: $responsive-screen-size) {
+                        padding-#{$position}: $pad * 1rem;
+                    }
                 }
-            }
-        }
 
-        &--top {
-            padding-top: $pad * 1rem;
-
-            &--mobile {
-                @media (max-width: $responsive-screen-size) {
-                    padding-top: $pad * 1rem;
-                }
-            }
-
-            &--responsive {
-                @media (min-width: $responsive-screen-size) {
-                    padding-top: $pad * 1rem;
-                }
-            }
-        }
-
-        &--bottom {
-            padding-bottom: $pad * 1rem;
-
-            &--mobile {
-                @media (max-width: $responsive-screen-size) {
-                    padding-bottom: $pad * 1rem;
-                }
-            }
-
-            &--responsive {
-                @media (min-width: $responsive-screen-size) {
-                    padding-bottom: $pad * 1rem;
+                &--responsive {
+                    @media (min-width: $responsive-screen-size) {
+                        padding-#{$position}: $pad * 1rem;
+                    }
                 }
             }
         }

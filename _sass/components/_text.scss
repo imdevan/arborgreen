@@ -1,10 +1,18 @@
 .text {
+
+    &--shadow {
+        text-shadow: 0px 0px 12px rgba(black, 0.2);
+    }
     &--accent {
         color: $accent-text;
     }
 
     &--cursive {
         font-family: 'Dancing Script', cursive;
+    }
+
+    &--thin {
+        font-weight: 200;
     }
 
     &--center {
@@ -22,9 +30,21 @@
 
         &--responsive {
             font-size: 2em;
-    
+
             @media (min-width: $responsive-screen-size) {
                 font-size: 5em;
+            }
+        }
+    }
+
+    &--md {
+        font-size: 3em;
+
+        &--responsive {
+            font-size: 1em;
+
+            @media (min-width: $responsive-screen-size) {
+                font-size: 1.25em;
             }
         }
     }
