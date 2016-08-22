@@ -31,10 +31,3 @@ function init() {
         }
     }
 }
-
-var flexThis = [].slice.call(document.querySelectorAll(".flex")).concat(
-    [].slice.call(document.querySelectorAll(".flex"))
-);
-
-flexThis.forEach(function (elm) {flexibility(elm)});
-console.log("done");

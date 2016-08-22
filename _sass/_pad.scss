@@ -1,4 +1,4 @@
-$paddings: 1, 2, 3, 5;
+$paddings: 1, 2, 3, 5, 7;
 $positions: "top", "left", "right", "bottom";
 
 @each $pad in $paddings {

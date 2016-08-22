@@ -16,20 +16,24 @@ nav:
       id: vitamins
 ---
 
-<header class="band--header  flex-center" id="home">
-    <section class="band__body flex-md-column flex-center text--accent">
-        <div class="flex-center flex-md-row" style="width: 100%;">
-            <figure style="width: 10rem; height: auto;" >
-                {% include svg/logo.svg %}
-            </figure>
-            <figcaption>
-                <h1 class="text--lg--responsive text--cursive pad-1--bottom--responsive underline">{{ page.title }}</h1>
-                <h3 class="pad-1--top">{{ page.subTitle }}</h3>
-            </figcaption>
+<header class="band--header  flex-center" style="text-align: center;" id="home">
+    <section class="abs--center" >
+        <div class="" style="abs--center ">
+            <div class="flex-center flex-md-row pad-8--top--mobile" style="width: 100%; padding-top: 8rem;">
+                <figure class="logo"  >
+                    {% include svg/logo.svg %}
+                </figure>
+                <figcaption class="text--accent">
+                    <h1 class="text--lg--responsive text--cursive pad-1--bottom--responsive underline">{{ page.title }}</h1>
+                    <h3 class="pad-1--top text--sm--mobile ">{{ page.subTitle }}</h3>
+                </figcaption>
+            </div>
+
+            <div class="pad-3--top">
+                {% include _cta.html %}
+            </div>
         </div>
-        <div class="pad-3--top">
-            {% include _cta.html %}
-        </div>
+
     </section>
 </header>
 
@@ -114,11 +118,13 @@ nav:
 
 <section class="band--staff flex-md-column flex--just-end  text--shadow">
     <div class="gradient-bg"></div>
-    <h2 class="section-title text--center" style="z-index: 1">Our amazing staff is here to help you reach your goals</h2>
+    <h2 class="section-title text--center abs--center-b-4" >
+        Our amazing staff is here to help you reach your goals
+    </h2>
 </section>
 
-<section class="band--contact flex-center flex-md-column" id="contact">
-    <div class="band__body flex flex-md-row--reverse">
+<section class="band--lg flex-center flex-md-column" id="contact">
+    <div class="band__body flex flex-md-row--reverse pad-3--top--responsive">
         <div class="pad-3--top--mobile flex-md-1 flex-center">
             {% include _map.html %}
         </div>
@@ -142,15 +148,17 @@ nav:
         </div>
     </div>
 
-    <div class="band__body text--center pad-3--top--mobile">
-        Conveniently located at Arbor Green Family Medicine on
-        Preston Road in North Dallas
+    <div class="band__body">
+        <aside class=" text--center pad-3--top--mobile pad-7--top--responsive">
+            Conveniently located at Arbor Green Family Medicine on
+            Preston Road in North Dallas
+        </aside>
     </div>
 </section>
 
-<section class="band flex-center" id="vitamins">
-    <div class="band__body flex-center flex-md-row">
-        <div class="width-50">
+<section class="band--lg flex-center" id="vitamins">
+    <div class="abs--center flex-center flex-md-row">
+        <div class="width-50 width--min-250">
             <img class="image--full image--shadow" src="./images/vitamins.jpg" alt="">
         </div>
         <div class="pad-3--left--responsive pad-3--top--mobile">

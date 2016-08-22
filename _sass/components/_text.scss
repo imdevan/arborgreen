@@ -37,6 +37,14 @@
         }
     }
 
+    &--sm {
+        &--mobile {
+            @media (max-width: $responsive-screen-size) {
+                font-size: 0.75em;
+            }
+        }
+    }
+
     &--md {
         font-size: 3em;
 

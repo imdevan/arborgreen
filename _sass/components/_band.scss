@@ -12,6 +12,12 @@ $text-shadow:  0 0 30px rgba(black, .25);
     }
 }
 
+@mixin clearfix() {
+    &::after {
+        clear: both;
+    }
+}
+
 .band {
     background-size: cover;
     background-position: center;
@@ -29,6 +35,7 @@ $text-shadow:  0 0 30px rgba(black, .25);
     &--header {
         @extend .band;
         @include lg();
+        @include clearfix();
 
         background-image: url("../images/face.jpg");
         background-position: 100% 50%;
@@ -37,6 +44,8 @@ $text-shadow:  0 0 30px rgba(black, .25);
         @media (max-width: $responsive-screen-size) {
             padding-top: $nav-height * 2;
             background-position: 100% 80%;
+
+            text-align: center;
         }
     }
 
@@ -61,9 +70,13 @@ $text-shadow:  0 0 30px rgba(black, .25);
         @extend .band;
     }
 
-    &--contact {
+    &--lg {
         @extend .band;
         @include lg();
+    }
+
+    &--relative {
+        position: relative;
     }
 }
 
